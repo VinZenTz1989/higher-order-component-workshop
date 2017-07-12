@@ -14,4 +14,4 @@ class CommentList extends Component {
   }
 }
 
-export default withLoading(CommentList)
+export default withLoading('comments')(CommentList)

@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import Loading from '../components/Loading'
 
-const withLoading = (WrappedComponent) => {
+const withLoading = (propName) => (WrappedComponent) => {
   return class ComponentWithLoading extends Component {
     render() {
-      return this.props.comments.length === 0 ? <Loading /> : <WrappedComponent {...this.props} />
+      return this.props[propName].length === 0 ? <Loading /> : <WrappedComponent {...this.props} />
     }
   }
 }
